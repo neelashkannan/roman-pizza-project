@@ -189,19 +189,32 @@ export default function Home() {
               )}
             </div>
 
-            {/* Pizza Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
-              {menuPizzas.map((pizza) => (
-                <div
-                  key={pizza.slug}
-                  className={cn(
-                    "transition-all duration-500",
-                    !isMatch(pizza) && "opacity-20 scale-95"
-                  )}
-                >
-                  <PizzaCard {...pizza} />
-                </div>
-              ))}
+            {/* Pizza Menu */}
+            <div className="max-w-4xl mx-auto mb-24">
+              <h3 className="text-title mb-8 pb-4 border-b border-neutral-200">Pizza al Taglio</h3>
+              <div className="space-y-6">
+                {menuPizzas.map((pizza) => (
+                  <div
+                    key={pizza.slug}
+                    className={cn(
+                      "flex justify-between gap-4 transition-all duration-300",
+                      !isMatch(pizza) && "opacity-20"
+                    )}
+                  >
+                    <div>
+                      <h4 className="font-medium mb-1 flex items-center gap-2">
+                        {pizza.name}
+                        {pizza.isNew && <span className="text-[10px] font-bold uppercase tracking-wider bg-primary text-white px-2 py-0.5">New</span>}
+                        {pizza.isVegetarian && <span className="text-[10px] font-bold uppercase tracking-wider text-primary">V</span>}
+                        {pizza.isVegan && <span className="text-[10px] font-bold uppercase tracking-wider text-primary">VG</span>}
+                        {pizza.isSpicy && <span className="text-[10px] font-bold uppercase tracking-wider text-accent">🌶</span>}
+                      </h4>
+                      <p className="text-caption">{pizza.description}</p>
+                    </div>
+                    <span className="text-primary font-medium whitespace-nowrap">£{pizza.price.toFixed(2)}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Sides & Drinks */}
