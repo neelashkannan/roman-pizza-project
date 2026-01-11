@@ -1,0 +1,4 @@
+1:"$Sreact.fragment"
+2:I[46270,["/roman-pizza-project/_next/static/chunks/d86edd8d9c59bb28.js","/roman-pizza-project/_next/static/chunks/a9ba7f40a24d1cd3.js"],"default"]
+3:I[68990,["/roman-pizza-project/_next/static/chunks/d86edd8d9c59bb28.js","/roman-pizza-project/_next/static/chunks/a9ba7f40a24d1cd3.js"],"default"]
+0:{"buildId":"O-ILVyzz4JfpWYr6fclGh","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}
